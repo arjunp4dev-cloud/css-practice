@@ -208,3 +208,12 @@ display: flex;
     background: #ff9800;
     transform: scale(1.05);
 }
+h1{
+    text-align: center;
+    color: #010203;
+    margin-top: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration:underline;
+    text-decoration-color: #778293;
+    text-decoration-thickness: 4px;
+}
