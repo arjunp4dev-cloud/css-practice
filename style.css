@@ -166,5 +166,20 @@ display: flex;
     padding: 20px;
     border-radius: 20px;
     text-align: center; 
-    margin-left: auto;}
-
+    margin-left: auto;
+}
+.gallery {
+    width: 200px;
+    height: 200px;
+    background-color: #e7af15;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.gallery-container {
+    display: inline;
+    flex-wrap: wrap;   
+    gap: 50px;         
+    max-width: 40px;
+}
