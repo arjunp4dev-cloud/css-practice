@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    height: 100vh;
+}
+.sidebar {
+    background: #1e293b;
+    color: white;
+    padding: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.sidebar li.active {
+    background: #6366f1;
+}
+
+.main-content {
+    background: #f1f5f9;
+    display: flex;
+    flex-direction: column;
+}
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.topbar input {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.avatar {
+    background: #6366f1;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.content {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+}
+
+.card {
+    background:rgb(218, 239, 243);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-top: #6366f1 5px solid;
+}
+.new{
+    background: rgb(218, 239, 243);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    margin-top: 20px;
+    align-items: center;
+}
+.newheader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+    border-bottom: 3px solid #e2e8f0;
+    font-size:20px;
+}
+.newitem {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+    align-items: center;
+}
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    background: #514d88;
+}
+
+
+
+
+
+.task-list2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    margin: 40px auto;
+}
+
+.task-list2 a {
+    text-decoration: none;
+    background: #222;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.task-list2 a:hover {
+    background: #ff9800;
+    transform: scale(1.05);}
+    .hero {
+  text-align: center;
+  margin-top: 100px;
+}
