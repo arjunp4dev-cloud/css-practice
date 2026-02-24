@@ -1,0 +1,119 @@
+.body{
+    background-color: rgb(129, 124, 117);
+}
+
+    .container {
+        display: grid; 
+grid-template-columns:(250px, 1fr);
+    gap: 20px; 
+    padding: 20px;
+
+
+ }
+ .box:hover{
+    background-color: #9da2a9;
+    transform: scale(1.03);
+    border: 1px solid #f9f9ff; 
+    box-shadow: 0 10px 30px rgb(72, 61, 61);
+}
+ 
+
+    .box{
+         background-color: hsl(213, 10%, 17%);
+    color: white;
+    padding: 50px;
+    border-radius: 1px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+     
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+
+    }
+    .header{
+    background-color: #6b7b92;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+
+
+
+
+
+    .sort-container {
+  display: inline-flex;
+  align-items: center;
+  background: #667285;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid #79899f;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+
+.sort-container select {
+  background: transparent;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sort-container {
+  position: relative;
+}
+
+.sort-container::after {
+  position: absolute;
+  right: 12px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+
+.task-list2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    margin: 40px auto;
+}
+
+.task-list2 a {
+    text-decoration: none;
+    background: #222;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.task-list2 a:hover {
+    background: #ff9800;
+    transform: scale(1.05);}
+    .hero {
+  text-align: center;
+  margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
