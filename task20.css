@@ -1,0 +1,61 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 150px; 
+    gap: 20px;
+
+    grid-auto-flow: dense;
+
+
+}
+
+.box {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: brown;
+}
+
+.box:hover {
+    transform: scale(0.3);
+    color: white;
+}
+
+
+.tall {
+    grid-row: span 2;
+    background-color: aqua;
+}
+
+.wide {
+    grid-column: span 2;
+    background-color: blue;
+}
+
+ .task-list2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    margin: 40px auto;
+}
+
+.task-list2 a {
+    text-decoration: none;
+    background: #222;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.task-list2 a:hover {
+    background: #ff9800;
+    transform: scale(1.05);}
+    .hero {
+  text-align: center;
+  margin-top: 100px;
+}
