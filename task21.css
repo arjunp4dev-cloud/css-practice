@@ -9,39 +9,20 @@ body {
 
 .container {
     position:relative;
-  background-color: rgb(216, 179, 179);
+  background-color: rgb(187, 181, 181);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 400px;
+  height:70vh;
 }
 .head { display: flex; justify-content: center; 
      align-items: center; 
      
      text-align: center;
-    height: 60px;  }
+    height: 110px;  }
 
 
- p2 {
-
-  display:flex;
-  justify-content:space-between;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #333;
-}
-p3 {
-
-  display:flex;
-  justify-content:space-between;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #333;
-}
-.p{
-    display: flex;
-    justify-content: space-between;
-}
 
 input[type="textbox"] {
   width: 100%;
@@ -70,20 +51,19 @@ color: white;
 .login{
     display: flex;
     justify-content:center;
+
+
     align-items:center;
-    padding-right:30px;
+    padding-left:60px;
     color:white;
    
     position:absolute;
     right: 120px;
     
+    
 
 }
-button{
-    border:radius 30px;
-    padding: 10px;
-    gap:30px;
-}
+
 
 
 
@@ -111,3 +91,116 @@ button{
   text-align: center;
   margin-top: 100px;
 }
+
+
+
+
+
+.buttons {
+  
+  display: flex;
+  gap: 40px; 
+  padding: 30px;
+  border-radius:20px;
+}
+
+
+.btn {
+  
+  
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+
+.google {
+  background-color: #db4437;
+}
+
+.twitter {
+  background-color: #1da1f2; 
+}
+
+.linkedin {
+  background-color: #0077b5; 
+}
+
+
+
+
+
+form {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;     
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50; 
+  color: white;
+  cursor: pointer;
+}
+
+.p{
+  display:flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
+
+
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #000; 
+}
+
+.divider span {
+  padding: 0 10px;  
+  font-weight: bold;
+  color: #000;
+}
+
+p2{
+  color: #117498;
+}
+img{
+   width: 60px;
+  height: 60px;
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+
+
+
+}
+
+
+
+
