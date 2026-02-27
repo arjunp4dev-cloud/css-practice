@@ -1,0 +1,116 @@
+.timeline {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  
+}
+
+
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #4f6cff;
+  transform: translateX(-50%);
+}
+
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left:0;
+  text-align: right;
+
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  width: 18px;
+  height: 18px;
+  background: #4f6cff;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-item.left::before {
+  right: -9px;
+}
+
+.timeline-item.right::before {
+  left: -9px;
+}
+
+
+
+.year {
+  position: absolute;
+  top: 55px;
+  font-weight: bold;
+  color: #333;
+}
+
+.timeline-item.left .year {
+  right: -80px;
+}
+
+.timeline-item.right .year {
+  left: -80px;
+}
+
+
+.content {
+  background: #5f7fa6;
+  padding: 30px;
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+
+ .task-list2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    margin: 40px auto;
+}
+
+.task-list2 a {
+    text-decoration: none;
+    background: #222;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.task-list2 a:hover {
+    background: #ff9800;
+    transform: scale(1.05);}
+    .hero {
+  text-align: center;
+  margin-top: 100px;
+}
+
+
+
+
+
+
