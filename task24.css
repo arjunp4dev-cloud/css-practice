@@ -1,0 +1,97 @@
+.calendar {
+    border: auto;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;   
+}
+
+
+.calendar-header {
+    font-size:40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  border-bottom:2px solid black;
+}
+
+.nav-btn {
+  background:rgb(214, 213, 213);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border-bottom:2px solid black;
+}
+
+.nav-btn:hover {
+  transform: scale(1.2);
+}
+
+
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+
+
+
+
+
+.calendar-grid div{
+    text-align: center;
+    border-bottom:1px solid black;
+    border-left: 1px solid black;
+
+    text-align: center;
+  padding: 40px;
+  border-right: 1px solid black;
+}
+
+.event{
+     display: inline-block;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: rgb(1, 1, 1);
+}
+
+.blue{ background-color:rgb(163, 208, 243);}
+.green{ background-color:rgb(172, 255, 134);}
+.yellow{ background-color:rgb(255, 237, 80);}
+
+
+
+ .task-list2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    margin: 40px auto;
+}
+
+.task-list2 a {
+    text-decoration: none;
+    background: #222;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.task-list2 a:hover {
+    background: #ff9800;
+    transform: scale(1.05);}
+    
+
+
+
+
+
+    
+
