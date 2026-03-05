@@ -1,0 +1,61 @@
+body{
+    background:#0f172a;
+    font-family:Arial;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.faq{
+    width:500px;
+}
+
+details{
+    background:#334155;
+    border-radius:8px;
+    margin-bottom:10px;
+    overflow:hidden;
+}
+
+summary{background-color: #b4d0a2;
+    padding:35px;
+    font-size:18px;
+    color:white;
+    cursor:pointer;
+    list-style-type:  none;
+}
+
+summary:hover{
+    background:#9caec6;
+}
+
+details p{
+    padding:15px;
+    color:#ffffff;
+    background:#76847c;
+}
+
+
+
+ .task-list2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    margin: 40px auto;
+}
+
+.task-list2 a {
+    text-decoration: none;
+    background: #222;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.task-list2 a:hover {
+    background: #ff9800;
+    transform: scale(1.05);}
+    
