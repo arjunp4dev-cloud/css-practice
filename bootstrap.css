@@ -1,0 +1,32 @@
+.container{
+    display:flex;
+    justify-content:space-between;
+}
+.row{
+     display:flex;
+    justify-content:space-between;
+
+}
+
+
+ .task-list3 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    margin: 40px auto;
+}
+
+.task-list3 a {
+    text-decoration: none;
+    background: #171616;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.task-list3 a:hover {
+    background: #ff9800;
+    transform: scale(1.05);}
+  
