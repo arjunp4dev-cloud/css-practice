@@ -1,61 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+    <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Newsletter Modal</title>
+<title>Newsletter</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="task32.css">
 
-<link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-dark d-flex justify-content-center align-items-center vh-100">
+<body>
 
-<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newsletterModal">
-Open Modal
-</button>
+<div class="newsletter">
 
-<!-- Modal -->
-<div class="modal fade" id="newsletterModal">
-  <div class="modal-dialog modal-dialog-centered">
-    
-    <div class="modal-content newsletter-card">
-
-      <button type="button" class="btn-close btn-close-white ms-auto m-3" data-bs-dismiss="modal"></button>
-
-      <div class="text-center p-4">
-
-        <div class="icon-circle mb-3">
-          ✉
-        </div>
-
-        <h2 class="fw-bold">Join the Newsletter</h2>
-
-        <p class="text-secondary">
-          Get weekly CSS tips and tricks delivered straight to your inbox.
-        </p>
-
-        <div class="d-flex gap-2 mt-4">
-
-          <input type="email" class="form-control" placeholder="you@example.com">
-
-          <button class="btn btn-primary px-4">Subscribe</button>
-
-        </div>
-
-        <p class="small text-secondary mt-3">
-          No spam, unsubscribe anytime.
-        </p>
-
-      </div>
-
-    </div>
-  </div>
+<div class="icon-circle">
+✉
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<h2 class="fw-bold">Join the Newsletter</h2>
+
+<p class="text-secondary">
+Get weekly CSS tips and tricks delivered straight to your inbox.
+</p>
+
+<div class="row mt-4 g-2 justify-content-center">
+
+<div class="col-md-7">
+<input type="email" class="form-control p-3" placeholder="you@example.com">
+</div>
+
+<div class="col-md-3">
+<button class="btn btn-primary w-100 p-3">Subscribe</button>
+</div>
+
+</div>
+
+<p class="small-text mt-4">
+No spam, unsubscribe anytime.
+</p>
+
+</div>
 
 </body>
 </html>
