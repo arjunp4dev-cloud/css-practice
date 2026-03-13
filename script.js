@@ -10,21 +10,41 @@ function decrease(){
     document.getElementById("count").innerText=count;
 
 }
+/*deleting*/
 
-let tasks = ["Study JavaScript", "Build Project", "Practice Coding", "Learn Django"];
+let tasks = [];
 
-let container = document.getElementById("taskContainer");
+function addTask() {
 
-for (let i = 0; i < tasks.length; i++) {
+    let input = document.getElementById("taskInput");
+    let task = input.value;
 
-    container.innerHTML += `
-        <div>
-            <p>${tasks[i]}</p>
-            <button onclick="deleteTask(this)">Delete</button>
-        </div>
-    `;
+    tasks.push(task);   
+
+    showTasks();       
+
+    input.value = "";  
 }
 
-function deleteTask(button){
-    button.parentElement.remove();
+function showTasks(){
+
+    let list = document.getElementById("taskList");
+    list.innerHTML = "";
+
+    for(let i = 0; i < tasks.length; i++){
+
+        list.innerHTML += `
+            <p>
+                ${tasks[i]}
+                <button onclick="deleteTask(${i})">Delete</button>
+            </p>
+        `;
+    }
+}
+
+function deleteTask(index){
+
+    tasks.splice(index,1);
+
+    showTasks();
 }
