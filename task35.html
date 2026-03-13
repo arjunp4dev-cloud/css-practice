@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+    <title>task35</title>
+</head>
+<style>
+    body{
+        background-color: #dbd5d5;
+    }
+    .switch{
+        border-radius:20px;
+  position: relative;
+  display: grid;
+  width: 60px;
+  height: 34px;
+  justify-content: center;
+}
+
+
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #818181;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #21f33d;
+}
+
+input:checked + .slider::before{
+  transform:translateX(26px);
+}
+
+
+.pricing{
+    width:400px;
+    background-color: #4a86e8;
+    padding: 10px;
+    border-radius: 8px;
+    color: rgb(11, 11, 11);
+    text-align: center;
+    gap: 10px;
+    line-height:40px;
+    font-size:20px;
+    justify-content: center;
+}
+.bod{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+}
+
+
+
+
+.task-list3 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    margin: 40px auto;
+}
+
+.task-list3 a {
+    text-decoration: none;
+    background: #222;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.task-list3 a:hover {
+    background: #ff9800;
+    transform: scale(1.05);}
+
+</style>
+<body>
+    <div class="bod">
+
+<div class="toggle">
+  <p>Monthly</p>
+  <label class="switch">
+    <input type="checkbox" id="togglePrice">
+    <span class="slider"></span>
+  </label>
+   <p>Yearly (-20%)</p>
+ 
+</div>
+
+<div class="pricing">
+
+  <div class="card">
+    <h2>Starter</h2>
+    <h1 id="starterPrice">$0</h1>
+  </div>
+
+  <div class="card">
+    <h2>Pro</h2>
+    <h1 id="proPrice">$29</h1>
+  </div>
+
+</div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -48,3 +48,20 @@ function deleteTask(index){
 
     showTasks();
 }
+
+let toggle = document.getElementById("togglePrice");
+
+let starter = document.getElementById("starterPrice");
+let pro = document.getElementById("proPrice");
+
+toggle.addEventListener("change", function(){
+
+    if(toggle.checked){
+        starter.innerText = "$100 /yr";
+        pro.innerText = "$278 /yr";
+    }else{
+        starter.innerText = "$0 /mo";
+        pro.innerText = "$29 /mo";
+    }
+
+});
