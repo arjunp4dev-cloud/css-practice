@@ -12,7 +12,7 @@ function decrease(){
 }
 /*deleting*/
 
-let tasks = [];
+let task = [];
 
 function addTask() {
 
@@ -68,7 +68,7 @@ toggle.addEventListener("change", function(){
 
 
 /* todo */
-let task = JSON.parse(localStorage.getItem("tasks")) || [];/* to call elements from stored data */
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];/* to call elements from stored data */
 
 
 displayTask();
@@ -83,9 +83,9 @@ alert("Enter a task");
 return;
 }
 
-tasks.push(task);
+tasks.push(tasks);
 
-localStorage.setItem("tasks", JSON.stringify(task));
+localStorage.setItem("tasks", JSON.stringify(tasks));
 
 input.value="";
 
@@ -129,3 +129,6 @@ let sum = Number(n1) + Number(n2);
 document.getElementById("result").innerHTML = sum;
 
 }
+
+
+
