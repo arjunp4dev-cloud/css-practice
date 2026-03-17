@@ -68,9 +68,10 @@ toggle.addEventListener("change", function(){
 
 
 /* todo */
-let task = JSON.parse(localStorage.getItem("tasks")) || [];
+let task = JSON.parse(localStorage.getItem("tasks")) || [];/* to call elements from stored data */
 
-displayTasks();
+
+displayTask();
 
 function addTask(){
 
@@ -84,7 +85,7 @@ return;
 
 tasks.push(task);
 
-localStorage.setItem("tasks", JSON.stringify(tasks));
+localStorage.setItem("tasks", JSON.stringify(task));
 
 input.value="";
 
@@ -96,7 +97,7 @@ function displayTasks(){
 let list = document.getElementById("taskList");
 list.innerHTML="";
 
-tasks.forEach((task,index)=>{
+task.forEach((tasks,index)=>{
 
 let li = document.createElement("li");
 li.innerHTML = task + 
@@ -114,5 +115,17 @@ tasks.splice(index,1);
 localStorage.setItem("tasks", JSON.stringify(tasks));
 
 displayTasks();
+
+}
+
+/* simple calculator*/
+  function addNumbers(){
+
+let n1 = document.getElementById("num1").value;
+let n2 = document.getElementById("num2").value;
+
+let sum = Number(n1) + Number(n2);
+
+document.getElementById("result").innerHTML = sum;
 
 }
