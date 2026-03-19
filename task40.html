@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Fetch API</title>
+    <title>Array Filtering</title>
 
     <style>
         body{
-            font-family: Arial;
             background:#0f172a;
             color:white;
+            font-family:Arial;
             display:flex;
             justify-content:center;
             align-items:center;
@@ -17,85 +17,70 @@
 
         .container{
             background:#1e293b;
-            padding:30px;
+            padding:25px;
             border-radius:10px;
-            text-align:center;
-            width:300px;
+            width:400px;
         }
 
         button{
-            padding:10px 20px;
-            background:#da72a6;
+            padding:10px 15px;
+            background:#8b5cf6;
             border:none;
             color:white;
             border-radius:6px;
             cursor:pointer;
-            margin-bottom:20px;
+            margin-bottom:15px;
         }
 
-        button:hover{
-            background:#db2777;
+        .item{
+            display:flex;
+            justify-content:space-between;
+            padding:8px 0;
+            border-bottom:1px solid #334155;
         }
-
-        #user{
-            margin-top:15px;
-        }
-
-        
-
-.task-list3 {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 300px;
-    margin: 40px auto;
-}
-
-.task-list3 a {
-    text-decoration: none;
-    background: #222;
-    color: white;
-    padding: 12px;
-    text-align: center;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-.task-list3 a:hover {
-    background: #ff9800;
-    transform: scale(1.05);}
-
-
     </style>
 </head>
 
 <body>
 
 <div class="container">
-    <h2>Fetch API Demo</h2>
+    <h2>Products</h2>
 
-    <button onclick="loadUser()">Load User</button>
+    <button onclick="filterItems()">Show Items &lt; $50</button>
 
-    <div id="user"></div>
+    <div id="list"></div>
 </div>
 
 <script>
-async function loadUser(){
+const products = [
+    { name: "Mouse", price: 25 },
+    { name: "Keyboard", price: 100 },
+    { name: "Monitor", price: 300 },
+    { name: "Cable", price: 10 },
+    { name: "Pad", price: 15 }
+];
 
-    document.getElementById("user").innerHTML = "Loading...";
+displayItems(products);
 
-    try{
-        let response = await fetch("https://jsonplaceholder.typicode.com/users/1");
-        let data = await response.json();
+function displayItems(items){
+    let html = "";
 
-        document.getElementById("user").innerHTML = `
-            <h3>${data.name}</h3>
-            <p>${data.email}</p>
+    items.forEach(item => {
+        html += `
+            <div class="item">
+                <span>${item.name}</span>
+                <span>$${item.price}</span>
+            </div>
         `;
-    }
-    catch(error){
-        document.getElementById("user").innerHTML = "Error loading data";
-        console.log(error);
-    }
+    });
+
+    document.getElementById("list").innerHTML = html;
+}
+
+
+function filterItems(){
+    const filtered = products.filter(item => item.price < 50);
+    displayItems(filtered);
 }
 </script>
 
