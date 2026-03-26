@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Closure Counter</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #99acc3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container {
+    background: #6a86b3;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #bfbcfd;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5848d6;
+}
+
+
+#value {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+
+#log {
+    margin-top: 15px;
+    background: #444e5b;
+    padding: 10px;
+    border-radius: 8px;
+    height: 120px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: 14px;
+}
+
+ .task-list3 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    margin: 40px auto;
+}
+
+.task-list3 a {
+    text-decoration: none;
+    background: #222;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.task-list3 a:hover {
+    background: #ff9800;
+    transform: scale(1.05);}
+
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Closure Counter</h2>
+
+    <button onclick="increment()">Add</button>
+    <button onclick="showValue()">Get Value</button>
+
+    <p id="value">Current Value: 0</p>
+
+    <div id="log"></div>
+</div>
+
+<script>
+
+
+function createCounter() {
+    let count = 0; 
+
+    return {
+        increment: function () {
+            count++;
+            addLog("Incremented (value is private)");
+        },
+        getValue: function () {
+            return count;
+        }
+    };
+}
+
+
+const counter = createCounter();
+
+
+function increment() {
+    counter.increment();
+}
+
+function showValue() {
+    document.getElementById("value").innerText =
+        "Current Value: " + counter.getValue();
+}
+
+
+function addLog(message) {
+    const logBox = document.getElementById("log");
+    const newLog = document.createElement("div");
+    newLog.innerText = "> " + message;
+    logBox.appendChild(newLog);
+
+    logBox.scrollTop = logBox.scrollHeight;
+}
+
+</script>
+
+</body>
+</html>
